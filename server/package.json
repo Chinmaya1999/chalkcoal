@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "node --watch src/index.js",
-    "start": "node src/index.js",
+    "start": "node index.js",
+     "build": "echo \"no build\"",
     "seed": "node src/seed.js",
     "products": "node src/addProducts.js",
     "photos": "node src/importPhotos.js"
