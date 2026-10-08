@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Story from './pages/Story';
+import Collection from './pages/Collection';
 import Product from './pages/Product';
 import { useSeo } from './seo';
 
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="men" element={<Shop gender="men" />} />
           <Route path="women" element={<Shop gender="women" />} />
           <Route path="story" element={<Story />} />
+          <Route path="collection" element={<Collection />} />
           <Route path="product/:slug" element={<Product />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="order/:number" element={<Order />} />

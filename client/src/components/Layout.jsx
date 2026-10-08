@@ -6,7 +6,7 @@ import BagDrawer from './BagDrawer';
 import Logo from './Logo';
 
 const NOTES = ['Delivering to the UK, Europe & USA', 'Minimal. Purposeful. Everyday essentials.', 'Designed in London'];
-const LINKS = [['/shop', 'Shop'], ['/men', 'Men'], ['/women', 'Women'], ['/story', 'Story']];
+const LINKS = [['/shop', 'Shop'], ['/men', 'Men'], ['/women', 'Women'], ['/collection', 'Collection'], ['/story', 'Story']];
 const SYMBOL = { GBP: '£ GBP', USD: '$ USD', EUR: '€ EUR', AED: 'AED' };
 
 export default function Layout() {

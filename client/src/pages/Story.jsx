@@ -8,8 +8,8 @@ import { useSeo } from '../seo';
 const CHAPTERS = [
   ['I', 'The in-between', 'Between the meeting and the gym. Between the flight and the first coffee. Between who you were at nine and who you need to be by six. Most of life happens in the in-between — and almost nothing is made for it.'],
   ['II', 'Three colours', 'Chalk, Ash and Coal. Purely monochrome, with nothing to match and nothing to decide. No seasonal noise, no logos shouting across the street — only pieces that work harder the longer you wear them.'],
-  ['III', 'Weight you can feel', 'From 150gsm training jersey to 420gsm heavyweight fleece. Every style is finished with twin-needle topstitching and a straight hem, and marked only by a tonal rubberised badge and a woven hem flag.'],
-  ['IV', 'Designed in London', 'Every pattern is drawn in London and produced with partner workshops in India. Each piece ships in recycled packaging, with care instructions printed inside the garment.'],
+  ['III', 'Weight you can feel', 'From 150gsm training jersey to 420gsm heavyweight French terry — eight fabric platforms carry all twenty-three styles. Every style is finished with clean twin-needle or stretch coverstitch hems, and marked only by a tonal slash, a printed inside label and a subtle side flag.'],
+  ['IV', 'Designed in London', 'Collection One, Autumn Winter 2026: nine unisex styles (S–XXL) and fourteen for women (XS–XL), forty-six style and colour options in all. Every pattern is drawn in London and developed with partner workshops in India; each piece ships in recycled packaging.'],
 ];
 
 export default function Story() {

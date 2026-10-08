@@ -1,6 +1,6 @@
 // Bulk-load real product photos. Put files in server/product-photos/ named by SKU, then run: npm run photos
-//   CC-M-001.jpg            cover photo for every colour       CC-M-001-2.jpg   second photo
-//   CC-M-001_chalk.jpg      photo for the Chalk colourway      CC-M-001_coal-2.jpg   second Coal photo
+//   CC-W04.jpg            cover photo for every colour       CC-W04-2.jpg   second photo
+//   CC-W04_chalk.jpg      photo for the Chalk colourway      CC-W04_coal-2.jpg   second Coal photo
 import 'dotenv/config';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -11,7 +11,7 @@ import Product from './models/Product.js';
 const SRC = path.resolve('product-photos');
 const OUT = path.resolve('uploads/products');
 fs.mkdirSync(OUT, { recursive: true });
-const NAME = /^(CC-[MW]-\d{3})(?:_(chalk|ash|coal))?(?:-(\d+))?\.(jpe?g|png|webp|avif)$/i;
+const NAME = /^(CC-[UW]\d{2})(?:_(chalk|ash|coal))?(?:-(\d+))?\.(jpe?g|png|webp|avif)$/i;
 const cap = (s) => s[0].toUpperCase() + s.slice(1).toLowerCase();
 
 const groups = {}; const skipped = [];

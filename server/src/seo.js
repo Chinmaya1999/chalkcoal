@@ -38,6 +38,9 @@ export async function metaFor(pathname, query = {}) {
     return { ...base, title: `${BRAND} — Minimal, Purposeful Everyday Essentials | Designed in London`, description: DEFAULT_DESC, jsonld: [org(), website()] };
   }
 
+  if (path === '/collection') {
+    return { ...base, title: `Collection One — Autumn Winter 2026 | ${BRAND}`, description: 'Twenty-three styles, eight fabric platforms, three colours. The full Chalk&Coal Collection One range.', jsonld: [crumbs([['Home', '/'], ['Collection', '/collection']])] };
+  }
   if (path === '/story') {
     return { ...base, title: `Our Story — Designed in London | ${BRAND}`, description: 'Three colours, heavyweight fabric and nothing that shouts. The story behind Chalk&Coal — designed in London, made in India.', jsonld: [crumbs([['Home', '/'], ['Story', '/story']])] };
   }
@@ -121,7 +124,7 @@ export async function sitemapXml() {
   const products = await Product.find({ active: true }, 'slug images updatedAt').lean();
   const u = (loc, extra = '', lastmod, pri = '0.7') => `  <url><loc>${esc(loc)}</loc>${lastmod ? `<lastmod>${new Date(lastmod).toISOString().slice(0, 10)}</lastmod>` : ''}<priority>${pri}</priority>${extra}</url>`;
   const rows = [
-    u(`${SITE()}/`, '', null, '1.0'), u(`${SITE()}/men`, '', null, '0.9'), u(`${SITE()}/women`, '', null, '0.9'), u(`${SITE()}/shop`, '', null, '0.8'), u(`${SITE()}/story`, '', null, '0.5'),
+    u(`${SITE()}/`, '', null, '1.0'), u(`${SITE()}/men`, '', null, '0.9'), u(`${SITE()}/women`, '', null, '0.9'), u(`${SITE()}/shop`, '', null, '0.8'), u(`${SITE()}/story`, '', null, '0.5'), u(`${SITE()}/collection`, '', null, '0.6'),
     ...products.map((p) => u(`${SITE()}/product/${p.slug}`, (p.images || []).slice(0, 3).map((i) => `<image:image><image:loc>${esc(abs(i))}</image:loc></image:image>`).join(''), p.updatedAt, '0.8')),
   ];
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${rows.join('\n')}\n</urlset>\n`;

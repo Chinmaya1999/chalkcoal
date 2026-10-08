@@ -1,0 +1,738 @@
+[
+ {
+  "sku": "CC-U01",
+  "unisex": true,
+  "name": "Heavyweight Tee",
+  "gsm": 240,
+  "colours": [
+   {
+    "name": "Chalk",
+    "hex": "#EFEBE2",
+    "code": "CC-U01-CH"
+   },
+   {
+    "name": "Ash",
+    "hex": "#93958F",
+    "code": "CC-U01-AS"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-U01-CO"
+   }
+  ],
+  "fabric": "100% cotton compact single jersey",
+  "desc": "Relaxed regular length with a modest dropped shoulder.",
+  "det": [
+   "Side-seamed body; proposed shoulder drop 2 cm from approved block",
+   "25.4 mm finished 1x1 neck rib; twin-needle collar topstitch",
+   "20 mm turned sleeve and bottom hems; twin-needle finish"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ]
+ },
+ {
+  "sku": "CC-U02",
+  "unisex": true,
+  "name": "Boxy Tee",
+  "gsm": 220,
+  "colours": [
+   {
+    "name": "Chalk",
+    "hex": "#EFEBE2",
+    "code": "CC-U02-CH"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-U02-CO"
+   }
+  ],
+  "fabric": "100% cotton single jersey",
+  "desc": "Wide square body and shorter hem; exaggerated shoulder width.",
+  "det": [
+   "Side-seamed square body with extended shoulder",
+   "20 mm finished 1x1 neck rib with tonal topstitch",
+   "20 mm turned hems; avoid curving bottom hem"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ]
+ },
+ {
+  "sku": "CC-U03",
+  "unisex": true,
+  "name": "Long Sleeve Tee",
+  "gsm": 220,
+  "colours": [
+   {
+    "name": "Ash",
+    "hex": "#93958F",
+    "code": "CC-U03-AS"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-U03-CO"
+   }
+  ],
+  "fabric": "100% cotton single jersey",
+  "desc": "Relaxed straight body with full sleeves and clean cuffs.",
+  "det": [
+   "20 mm neck rib; shoulder seam stabilised with soft tape",
+   "40 mm finished 1x1 sleeve cuffs; cuff seam to underside",
+   "20 mm twin-needle bottom hem"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ]
+ },
+ {
+  "sku": "CC-U04",
+  "unisex": true,
+  "name": "Heavyweight Hoodie",
+  "gsm": 420,
+  "colours": [
+   {
+    "name": "Chalk",
+    "hex": "#EFEBE2",
+    "code": "CC-U04-CH"
+   },
+   {
+    "name": "Ash",
+    "hex": "#93958F",
+    "code": "CC-U04-AS"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-U04-CO"
+   }
+  ],
+  "fabric": "100% cotton loopback French terry",
+  "desc": "Oversized pullover with dropped shoulders and kangaroo pocket.",
+  "det": [
+   "Double-layer two-panel hood; tonal flat 8 mm drawcord",
+   "Kangaroo pocket: proposed 36 x 22 cm, bottom aligned to waistband",
+   "60 mm rib cuffs and hem; secure pocket entries with bartacks"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ]
+ },
+ {
+  "sku": "CC-U05",
+  "unisex": true,
+  "name": "Crewneck Sweat",
+  "gsm": 400,
+  "colours": [
+   {
+    "name": "Ash",
+    "hex": "#93958F",
+    "code": "CC-U05-AS"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-U05-CO"
+   }
+  ],
+  "fabric": "100% cotton loopback French terry",
+  "desc": "Relaxed dropped-shoulder sweatshirt with balanced rib trims.",
+  "det": [
+   "25 mm 1x1 neck rib; 60 mm rib hem and cuffs",
+   "Soft shoulder tape; overlock shoulder and armhole seams",
+   "Tonal coverstitch around neck; match cuff and waistband tension"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ]
+ },
+ {
+  "sku": "CC-U06",
+  "unisex": true,
+  "name": "Jogger",
+  "gsm": 400,
+  "colours": [
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-U06-CO"
+   }
+  ],
+  "fabric": "100% cotton loopback French terry",
+  "desc": "Relaxed hip and thigh with tapered legs and rib cuffs.",
+  "det": [
+   "40 mm elastic waistband with flat 8 mm drawcord and metal tips",
+   "Two slant side pockets; pocket bags proposed 28 x 17 cm",
+   "60 mm finished rib cuffs; bartack pocket entries and crotch stress points"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ]
+ },
+ {
+  "sku": "CC-U07",
+  "unisex": true,
+  "name": "Train Tee",
+  "gsm": 150,
+  "colours": [
+   {
+    "name": "Chalk",
+    "hex": "#EFEBE2",
+    "code": "CC-U07-CH"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-U07-CO"
+   }
+  ],
+  "fabric": "92% polyester / 8% elastane jersey",
+  "desc": "Regular athletic fit with short sleeves and movement ease.",
+  "det": [
+   "10 mm self-fabric neck binding, finished width",
+   "Four-thread overlock assembly; stretch coverstitch hems",
+   "Soft heat-transfer slash; no rigid rubber badge on light stretch fabric"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ]
+ },
+ {
+  "sku": "CC-U08",
+  "unisex": true,
+  "name": "Train Long Sleeve",
+  "gsm": 150,
+  "colours": [
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-U08-CO"
+   }
+  ],
+  "fabric": "92% polyester / 8% elastane jersey",
+  "desc": "Regular athletic fit with full sleeves and self-fabric cuffs.",
+  "det": [
+   "10 mm self-fabric neck binding; narrow stretch coverstitch",
+   "20 mm turned sleeve/bottom hems; no cotton rib cuffs",
+   "Soft tonal heat-transfer branding at left chest"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ]
+ },
+ {
+  "sku": "CC-U09",
+  "unisex": true,
+  "name": "Train Short 7\"",
+  "gsm": 190,
+  "colours": [
+   {
+    "name": "Ash",
+    "hex": "#93958F",
+    "code": "CC-U09-AS"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-U09-CO"
+   }
+  ],
+  "fabric": "90% polyester / 10% elastane stretch woven",
+  "desc": "Unlined athletic woven short; seven-inch finished inseam.",
+  "det": [
+   "40 mm elastic waist; internal flat drawcord with soft ends",
+   "Two side pockets with zipper closure and bartacked ends",
+   "25 mm turned hem; proposed 30 mm side vent"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ]
+ },
+ {
+  "sku": "CC-W01",
+  "unisex": false,
+  "name": "Cropped Tee",
+  "gsm": 220,
+  "colours": [
+   {
+    "name": "Chalk",
+    "hex": "#EFEBE2",
+    "code": "CC-W01-CH"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-W01-CO"
+   }
+  ],
+  "fabric": "100% cotton single jersey",
+  "desc": "Boxy waist-length crop with relaxed sleeves.",
+  "det": [
+   "20 mm neck rib; soft shoulder tape",
+   "Straight crop hem and short sleeves with 20 mm twin-needle hems",
+   "Avoid raw edges; apply tonal badge clear of bust apex"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ]
+ },
+ {
+  "sku": "CC-W02",
+  "unisex": false,
+  "name": "Relaxed Tee",
+  "gsm": 200,
+  "colours": [
+   {
+    "name": "Ash",
+    "hex": "#93958F",
+    "code": "CC-W02-AS"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-W02-CO"
+   }
+  ],
+  "fabric": "100% cotton single jersey",
+  "desc": "Easy body with a dropped shoulder and hip-length straight hem.",
+  "det": [
+   "20 mm neck rib and tonal collar topstitch",
+   "Side-seamed body with 20 mm sleeve/bottom hems",
+   "Soft printed back-neck identity; left-side hem flag"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ]
+ },
+ {
+  "sku": "CC-W03",
+  "unisex": false,
+  "name": "Long Sleeve Tee",
+  "gsm": 200,
+  "colours": [
+   {
+    "name": "Ash",
+    "hex": "#93958F",
+    "code": "CC-W03-AS"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-W03-CO"
+   }
+  ],
+  "fabric": "95% cotton / 5% elastane single jersey",
+  "desc": "Close relaxed fit with a cropped straight hem and full sleeves.",
+  "det": [
+   "20 mm self-fabric neck band with stretch seam",
+   "20 mm turned sleeve and bottom hems",
+   "No thumbhole; sleeve opening stays clean and minimal"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ]
+ },
+ {
+  "sku": "CC-W04",
+  "unisex": false,
+  "name": "Cropped Hoodie",
+  "gsm": 400,
+  "colours": [
+   {
+    "name": "Chalk",
+    "hex": "#EFEBE2",
+    "code": "CC-W04-CH"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-W04-CO"
+   }
+  ],
+  "fabric": "100% cotton loopback French terry",
+  "desc": "Dropped-shoulder pullover with a cropped rib hem.",
+  "det": [
+   "Double-layer two-panel hood; flat 8 mm drawcord with metal tips",
+   "50 mm rib cuffs and hem; no kangaroo pocket on crop",
+   "Overlock assembly with tonal coverstitch at armhole"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ]
+ },
+ {
+  "sku": "CC-W05",
+  "unisex": false,
+  "name": "Oversized Hoodie",
+  "gsm": 420,
+  "colours": [
+   {
+    "name": "Ash",
+    "hex": "#93958F",
+    "code": "CC-W05-AS"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-W05-CO"
+   }
+  ],
+  "fabric": "100% cotton loopback French terry",
+  "desc": "Generous longline pullover with dropped shoulders and front pocket.",
+  "det": [
+   "Double-layer hood; 8 mm drawcord with matte black metal tips",
+   "Kangaroo pocket proposed 34 x 21 cm; reinforce entries",
+   "60 mm rib cuffs and hem; printed neck label"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ]
+ },
+ {
+  "sku": "CC-W06",
+  "unisex": false,
+  "name": "Crewneck Sweat",
+  "gsm": 400,
+  "colours": [
+   {
+    "name": "Ash",
+    "hex": "#93958F",
+    "code": "CC-W06-AS"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-W06-CO"
+   }
+  ],
+  "fabric": "100% cotton loopback French terry",
+  "desc": "Relaxed crewneck with a slightly shortened body.",
+  "det": [
+   "25 mm neck rib; 60 mm rib cuffs and hem",
+   "Soft shoulder tape and tonal neck coverstitch",
+   "Side seams aligned; no decorative contrast seams"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ]
+ },
+ {
+  "sku": "CC-W07",
+  "unisex": false,
+  "name": "Jogger",
+  "gsm": 400,
+  "colours": [
+   {
+    "name": "Ash",
+    "hex": "#93958F",
+    "code": "CC-W07-AS"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-W07-CO"
+   }
+  ],
+  "fabric": "100% cotton loopback French terry",
+  "desc": "High-rise relaxed jogger with tapered legs and rib cuffs.",
+  "det": [
+   "40 mm elastic waistband, 8 mm tonal drawcord with metal tips",
+   "Two slant side pockets; proposed 26 x 16 cm bags",
+   "60 mm rib cuffs; bartacks at pocket ends"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ]
+ },
+ {
+  "sku": "CC-W08",
+  "unisex": false,
+  "name": "Flared Pant",
+  "gsm": 400,
+  "colours": [
+   {
+    "name": "Chalk",
+    "hex": "#EFEBE2",
+    "code": "CC-W08-CH"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-W08-CO"
+   }
+  ],
+  "fabric": "95% cotton / 5% elastane compact interlock",
+  "desc": "High-rise fitted hip with a gentle flare below the knee.",
+  "det": [
+   "60 mm double self-fabric waistband with 35 mm concealed elastic",
+   "No external drawcord or pockets; smooth front and back",
+   "25 mm stretch coverstitched hems; symmetric knee-to-hem flare"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ]
+ },
+ {
+  "sku": "CC-W09",
+  "unisex": false,
+  "name": "Train Bra",
+  "gsm": 250,
+  "colours": [
+   {
+    "name": "Ash",
+    "hex": "#93958F",
+    "code": "CC-W09-AS"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-W09-CO"
+   }
+  ],
+  "fabric": "75% nylon / 25% elastane interlock",
+  "desc": "Scoop-neck racerback training bra with a covered elastic underband.",
+  "det": [
+   "Double front layer; removable cups through inside side openings",
+   "Soft racerback straps; 35 mm covered underband elastic",
+   "Flatlock where suitable; soft stretch binding at neck and armholes"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ]
+ },
+ {
+  "sku": "CC-W10",
+  "unisex": false,
+  "name": "Train Tank",
+  "gsm": 150,
+  "colours": [
+   {
+    "name": "Chalk",
+    "hex": "#EFEBE2",
+    "code": "CC-W10-CH"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-W10-CO"
+   }
+  ],
+  "fabric": "92% polyester / 8% elastane jersey",
+  "desc": "Scoop-neck fitted tank with racerback and hip-length hem.",
+  "det": [
+   "10 mm soft self binding at neckline and armholes",
+   "Racerback; 20 mm stretch coverstitch bottom hem",
+   "No built-in bra; soft tonal heat-transfer logo"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ]
+ },
+ {
+  "sku": "CC-W11",
+  "unisex": false,
+  "name": "Train Tee",
+  "gsm": 150,
+  "colours": [
+   {
+    "name": "Chalk",
+    "hex": "#EFEBE2",
+    "code": "CC-W11-CH"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-W11-CO"
+   }
+  ],
+  "fabric": "92% polyester / 8% elastane jersey",
+  "desc": "Regular athletic body with short set-in sleeves.",
+  "det": [
+   "10 mm self neckline binding; soft internal seams",
+   "Stretch coverstitch sleeve and bottom hems",
+   "Tonal heat-transfer slash on left chest"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ]
+ },
+ {
+  "sku": "CC-W12",
+  "unisex": false,
+  "name": "Train Long Sleeve",
+  "gsm": 150,
+  "colours": [
+   {
+    "name": "Chalk",
+    "hex": "#EFEBE2",
+    "code": "CC-W12-CH"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-W12-CO"
+   }
+  ],
+  "fabric": "92% polyester / 8% elastane jersey",
+  "desc": "Regular athletic full-sleeve top with a clean crew neckline.",
+  "det": [
+   "10 mm self neckline binding and stretch assembly seams",
+   "20 mm turned sleeve/bottom hems; no rib cuff or thumbholes",
+   "Soft tonal heat-transfer slash; smooth skin-facing seams"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ]
+ },
+ {
+  "sku": "CC-W13",
+  "unisex": false,
+  "name": "Train Short 5\"",
+  "gsm": 190,
+  "colours": [
+   {
+    "name": "Ash",
+    "hex": "#93958F",
+    "code": "CC-W13-AS"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-W13-CO"
+   }
+  ],
+  "fabric": "90% polyester / 10% elastane stretch woven",
+  "desc": "High-rise unlined woven training short with five-inch inseam.",
+  "det": [
+   "40 mm elastic waist with internal drawcord and soft ends",
+   "Two zipped side pockets; bartacked ends",
+   "25 mm turned hems with proposed 30 mm side vents"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ]
+ },
+ {
+  "sku": "CC-W14",
+  "unisex": false,
+  "name": "Cycling Short",
+  "gsm": 250,
+  "colours": [
+   {
+    "name": "Ash",
+    "hex": "#93958F",
+    "code": "CC-W14-AS"
+   },
+   {
+    "name": "Coal",
+    "hex": "#252626",
+    "code": "CC-W14-CO"
+   }
+  ],
+  "fabric": "75% nylon / 25% elastane interlock",
+  "desc": "High-rise close-fit training short with a broad waistband.",
+  "det": [
+   "80 mm double self-fabric waistband with 35 mm concealed elastic",
+   "Flatlock side/inner-leg seams; gusset at crotch",
+   "25 mm stretch coverstitch leg hem; no padding or pockets"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ]
+ }
+]
