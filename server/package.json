@@ -9,7 +9,7 @@
     "products": "node src/addProducts.js",
     "photos": "node src/importPhotos.js",
     "extras": "node src/addExtras.js",
-    "test": "node --test test/"
+    "test": "node --test \"test/**/*.test.js\""
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
