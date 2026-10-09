@@ -1,0 +1,12 @@
+**/node_modules
+**/dist
+.git
+.github
+.env
+**/.env
+*.pem
+server/uploads
+server/video
+server/product-photos
+deploy
+*.md

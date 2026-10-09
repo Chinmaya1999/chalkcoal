@@ -1,0 +1,44 @@
+# Caddy obtains and renews Let's Encrypt certificates automatically and redirects HTTP -> HTTPS.
+{
+	email {$ACME_EMAIL}
+}
+
+(secure) {
+	encode zstd gzip
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "SAMEORIGIN"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		-Server
+	}
+}
+
+# Storefront (+ server-rendered SEO tags) — the Node app serves it and the /api it talks to on the same origin.
+chalkcoal.com {
+	import secure
+	request_body {
+		max_size 60MB
+	}
+	reverse_proxy app:5050
+}
+
+www.chalkcoal.com {
+	redir https://chalkcoal.com{uri} permanent
+}
+
+# Public API host (webhooks, mobile/3rd-party clients). Only API + uploaded media are exposed here.
+api.chalkcoal.com {
+	import secure
+	request_body {
+		max_size 60MB
+	}
+	@api path /api/* /uploads/*
+	handle @api {
+		reverse_proxy app:5050
+	}
+	handle {
+		respond "Not found" 404
+	}
+}

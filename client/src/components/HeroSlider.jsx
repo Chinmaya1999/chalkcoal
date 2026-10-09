@@ -5,7 +5,8 @@ import { useApp } from '../store';
 
 const SLIDE_MS = 8500;
 const DEFAULTS = [
-  { key: 'women', src: '/media/hero-women.mp4', poster: '/media/hero-women.jpg', pos: '52% 30%', eyebrow: "AW26 · Women's collection", title: 'The in\u2011between', cta: 'Shop women', to: '/women', alt: 'Black and white film of a woman in a hat adjusting a scarf' },
+  { key: 'women', ms: 30000, src: '/media/hero-women.mp4', poster: '/media/hero-women.jpg', pos: '52% 30%', eyebrow: "AW26 · Women's collection", title: 'The in\u2011between', cta: 'Shop women', to: '/women', alt: 'Black and white film of a woman in a hat adjusting a scarf' },
+  { key: 'street', src: '/media/hero-street.mp4', poster: '/media/hero-men.jpg', pos: '50% 35%', eyebrow: 'AW26 · The collection', title: 'Monochrome, on the street', cta: 'Shop all', to: '/shop', alt: 'Models wearing monochrome streetwear' },
   { key: 'hoodie', src: '/media/feature-hoodie.mp4', poster: '/media/feature-hoodie.jpg', pos: '35% 40%', eyebrow: 'The essential · 420gsm', title: 'Heavyweight hoodie', cta: 'Discover', to: '/shop?category=sweats', alt: 'Black and white film of a woman in an oversized hoodie' },
 ];
 
@@ -27,7 +28,7 @@ export default function HeroSlider() {
   useEffect(() => {
     clearTimeout(timer.current);
     if (paused) return;
-    timer.current = setTimeout(() => go(idx + 1), SLIDE_MS);
+    timer.current = setTimeout(() => go(idx + 1), slides[idx].ms || SLIDE_MS);
     return () => clearTimeout(timer.current);
   }, [idx, paused, go]);
 
@@ -58,7 +59,7 @@ export default function HeroSlider() {
         <div className="hbars" role="tablist" aria-label="Choose slide">
           {slides.map((s, i) => (
             <button key={s.key} role="tab" aria-selected={i === idx} aria-label={`Show slide ${i + 1}`} className={`hbar ${i === idx ? 'on' : ''} ${paused ? 'paused' : ''}`} onClick={() => go(i)}>
-              <i key={`${idx}-${i}`} style={i === idx && !paused ? { animationDuration: `${SLIDE_MS}ms` } : undefined} />
+              <i key={`${idx}-${i}`} style={i === idx && !paused ? { animationDuration: `${s.ms || SLIDE_MS}ms` } : undefined} />
             </button>
           ))}
         </div>

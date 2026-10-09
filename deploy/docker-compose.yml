@@ -1,0 +1,63 @@
+# Production stack. IMAGE_TAG is set by deploy.sh; secrets live in /opt/chalkcoal/.env (never in git).
+services:
+  app:
+    image: awsmallick1999/chalkcoal:${IMAGE_TAG:-latest}
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      NODE_ENV: production
+      PORT: "5050"
+    volumes:
+      - uploads:/app/server/uploads
+    expose: ["5050"]
+    read_only: true
+    tmpfs: ["/tmp"]
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: [ALL]
+    mem_limit: 300m
+    depends_on:
+      mongo: { condition: service_healthy }
+    networks: [web]
+
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    command: ["mongod", "--auth", "--wiredTigerCacheSizeGB", "0.25", "--bind_ip_all"]
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 40s
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 380m
+    networks: [web]
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    depends_on: [app]
+    ports: ["80:80", "443:443", "443:443/udp"]
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    environment:
+      ACME_EMAIL: pradipta@uuoinnovation.com
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 120m
+    networks: [web]
+
+networks:
+  web:
+
+volumes:
+  mongo_data:
+  uploads:
+  caddy_data:
+  caddy_config:
