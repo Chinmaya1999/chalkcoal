@@ -21,6 +21,7 @@ const Orders = lazy(() => import('./admin/Orders'));
 const Customers = lazy(() => import('./admin/Customers'));
 const Coupons = lazy(() => import('./admin/Coupons'));
 const Wireframe = lazy(() => import('./pages/Wireframe'));
+const Festivals = lazy(() => import('./admin/Festivals'));
 const Site = lazy(() => import('./admin/Site'));
 
 function NotFound() {
@@ -56,6 +57,7 @@ export default function App() {
           <Route path="products/:id" element={<ProductForm />} />
           <Route path="customers" element={<Customers />} />
           <Route path="coupons" element={<Coupons />} />
+          <Route path="festivals" element={<Festivals />} />
           <Route path="site" element={<Site />} />
         </Route>
       </Routes>

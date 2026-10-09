@@ -4,6 +4,7 @@ import { useApp } from '../store';
 import { api } from '../api';
 import BagDrawer from './BagDrawer';
 import Logo from './Logo';
+import FestivalBanner from './FestivalBanner';
 
 const NOTES = ['Delivering to the UK, Europe & USA', 'Minimal. Purposeful. Everyday essentials.', 'Designed in London'];
 const LINKS = [['/shop', 'Shop'], ['/men', 'Men'], ['/women', 'Women'], ['/collection', 'Collection'], ['/story', 'Story']];
@@ -42,6 +43,7 @@ export default function Layout() {
   return (
     <>
       <div className="announce"><div className="marquee">{[...notes, ...notes, ...notes, ...notes].map((n, i) => <span key={i}>{n}</span>)}</div></div>
+      <FestivalBanner />
       <header className={`header ${hide ? 'hide' : ''} ${over ? 'over' : ''}`} onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}>
         <div className="wrap header-in">
           <nav className="nav">{LINKS.map(([to, l]) => <NavLink key={to} to={to}>{l}</NavLink>)}</nav>

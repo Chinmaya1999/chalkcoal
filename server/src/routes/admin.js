@@ -36,6 +36,19 @@ r.put('/settings', wrap(async (req, res) => {
     collections: z.object({ men: mediaSchema, women: mediaSchema }).optional(),
     rates: z.object({ USD: z.number().positive(), EUR: z.number().positive(), AED: z.number().positive() }).optional(),
     announcements: z.array(z.string().min(1)).max(8).optional(),
+    festival: z.object({
+      enabled: z.boolean(),
+      theme: z.string().max(30),
+      title: z.string().max(80),
+      message: z.string().max(220),
+      cta: z.string().max(30),
+      link: z.string().max(200).regex(/^(\/(?!\/)|https:\/\/)/, 'Link must start with / or https://').or(z.literal('')),
+      start: z.string().regex(/^(\d{4}-\d{2}-\d{2})?$/),
+      end: z.string().regex(/^(\d{4}-\d{2}-\d{2})?$/),
+      sitewide: z.boolean(),
+      showLogo: z.boolean(),
+      image: z.string().max(300).regex(/^(\/uploads\/[\w.-]+)?$/),
+    }).optional(),
   }).parse(req.body);
   const doc = await Setting.findOneAndUpdate({ key: 'site' }, { $set: body }, { new: true, upsert: true });
   clearRatesCache();

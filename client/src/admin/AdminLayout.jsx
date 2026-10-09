@@ -3,7 +3,7 @@ import { useApp } from '../store';
 import Logo from '../components/Logo';
 import { useSeo } from '../seo';
 
-const NAV = [['/admin', 'Dashboard', true], ['/admin/orders', 'Orders'], ['/admin/products', 'Products'], ['/admin/customers', 'Customers'], ['/admin/coupons', 'Discounts'], ['/admin/site', 'Site content']];
+const NAV = [['/admin', 'Dashboard', true], ['/admin/orders', 'Orders'], ['/admin/products', 'Products'], ['/admin/customers', 'Customers'], ['/admin/coupons', 'Discounts'], ['/admin/festivals', 'Festivals'], ['/admin/site', 'Site content']];
 
 export default function AdminLayout() {
   const { user, logout, toast } = useApp();
