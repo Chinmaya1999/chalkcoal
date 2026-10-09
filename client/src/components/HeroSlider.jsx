@@ -5,9 +5,9 @@ import { useApp } from '../store';
 
 const SLIDE_MS = 8500;
 const DEFAULTS = [
-  { key: 'women', ms: 30000, src: '/media/hero-women.mp4', poster: '/media/hero-women.jpg', pos: '52% 30%', eyebrow: "AW26 · Women's collection", title: 'The in\u2011between', cta: 'Shop women', to: '/women', alt: 'Black and white film of a woman in a hat adjusting a scarf' },
-  { key: 'street', src: '/media/hero-street.mp4', poster: '/media/hero-men.jpg', pos: '50% 35%', eyebrow: 'AW26 · The collection', title: 'Monochrome, on the street', cta: 'Shop all', to: '/shop', alt: 'Models wearing monochrome streetwear' },
-  { key: 'hoodie', src: '/media/feature-hoodie.mp4', poster: '/media/feature-hoodie.jpg', pos: '35% 40%', eyebrow: 'The essential · 420gsm', title: 'Heavyweight hoodie', cta: 'Discover', to: '/shop?category=sweats', alt: 'Black and white film of a woman in an oversized hoodie' },
+  { key: 'women', ms: 30000, src: '/media/hero-women.mp4', poster: '/media/hero-women.jpg', pos: '52% 30%', eyebrow: "AW26 · Women's collection", title: 'The in\u2011between', sub: 'Heavyweight essentials for everything between the meeting and the gym.', cta: 'Shop women', to: '/women', alt: 'Black and white film of a woman in a hat adjusting a scarf' },
+  { key: 'street', src: '/media/hero-street.mp4', poster: '/media/hero-men.jpg', pos: '50% 35%', eyebrow: 'AW26 · The collection', title: 'Monochrome, on the street', sub: 'Three colours. Nothing that shouts.', cta: 'Shop all', to: '/shop', alt: 'Models wearing monochrome streetwear' },
+  { key: 'hoodie', src: '/media/feature-hoodie.mp4', poster: '/media/feature-hoodie.jpg', pos: '35% 40%', eyebrow: 'The essential · 420gsm', title: 'Heavyweight hoodie', sub: '420gsm brushed fleece, built to be worn every day.', cta: 'Discover', to: '/shop?category=sweats', alt: 'Black and white film of a woman in an oversized hoodie' },
 ];
 
 export default function HeroSlider() {
@@ -50,6 +50,7 @@ export default function HeroSlider() {
           <div className="slide-copy">
             <span className="eyebrow">{s.eyebrow}</span>
             <h2>{s.title}</h2>
+            {s.sub && <p className="slide-sub">{s.sub}</p>}
             <Link to={s.to} className="ulink" tabIndex={i === idx ? 0 : -1}>{s.cta} <i>→</i></Link>
           </div>
         </div>

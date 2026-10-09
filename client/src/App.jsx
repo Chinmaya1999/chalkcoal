@@ -20,6 +20,7 @@ const ProductForm = lazy(() => import('./admin/ProductForm'));
 const Orders = lazy(() => import('./admin/Orders'));
 const Customers = lazy(() => import('./admin/Customers'));
 const Coupons = lazy(() => import('./admin/Coupons'));
+const Wireframe = lazy(() => import('./pages/Wireframe'));
 const Site = lazy(() => import('./admin/Site'));
 
 function NotFound() {
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="shop" element={<Shop />} />
           <Route path="men" element={<Shop gender="men" />} />
           <Route path="women" element={<Shop gender="women" />} />
+          <Route path="wireframe" element={<Wireframe />} />
           <Route path="story" element={<Story />} />
           <Route path="collection" element={<Collection />} />
           <Route path="product/:slug" element={<Product />} />

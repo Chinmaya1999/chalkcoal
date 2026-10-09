@@ -96,7 +96,10 @@ export default function Home() {
           <h2 className="quote">Built for the <em>in-between.</em></h2>
           <p>Between the meeting and the gym. Between the flight and the first coffee. Most of life happens in the in-between — and almost nothing is made for it.</p>
           <p>So we made less, and made it properly: three colours, heavyweight fabric, a tonal badge and nothing that shouts.</p>
-          <Link to="/story" className="link" style={{ justifySelf: 'start' }}>Read the story</Link>
+          <div className="cta-row">
+            <Link to="/shop" className="btn">Shop the collection</Link>
+            <Link to="/story" className="link">Read the story</Link>
+          </div>
         </Reveal>
       </section>
 
@@ -130,6 +133,16 @@ export default function Home() {
         <DesignDetails />
         <Reveal className="sec-title" style={{ marginTop: 72 }}><h2>Packaging &amp; branding</h2><hr /></Reveal>
         <Packaging />
+      </section>
+
+      <section className="final-cta" aria-label="Start shopping">
+        <Reveal><span className="eyebrow">AW26</span></Reveal>
+        <Reveal delay={100}><h2>Made for the in-between.</h2></Reveal>
+        <Reveal delay={200}><p>Free delivery on orders over £120 across the UK. Easy returns.</p></Reveal>
+        <Reveal delay={300} className="cta-row center">
+          <Link to="/women" className="btn light">Shop women</Link>
+          <Link to="/men" className="btn light">Shop men</Link>
+        </Reveal>
       </section>
 
       <Newsletter />

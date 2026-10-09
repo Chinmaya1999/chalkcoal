@@ -6,7 +6,7 @@ export const SITE = () => (process.env.SITE_URL || `http://localhost:${process.e
 const BRAND = 'Chalk&Coal';
 const TAGLINE = 'Minimal. Purposeful. Everyday essentials.';
 const DEFAULT_DESC = 'Monochrome essentials in Chalk, Ash and Coal. Heavyweight tees, hoodies and joggers, 150–420gsm. Designed in London. Delivering to the UK, Europe and USA.';
-const NOINDEX = /^\/(admin|account|checkout|order|login|register)(\/|$)/;
+const NOINDEX = /^\/(admin|account|checkout|order|login|register|wireframe)(\/|$)/;
 const abs = (u) => (!u ? `${SITE()}/og-default.jpg` : /^https?:/.test(u) ? u : `${SITE()}${u}`);
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const ld = (o) => JSON.stringify(o).replace(/</g, '\\u003c');
