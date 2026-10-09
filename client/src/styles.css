@@ -832,3 +832,6 @@ a, button, .pill, .size, .swatch, .radio { touch-action: manipulation; }
 .fest-card .meta small { color: #77756c; font-size: 11px; }
 .fest-card.on { outline: 2px solid var(--coal); outline-offset: -2px; }
 .fest-prev { border: 1px solid var(--line); overflow: hidden; }
+
+.festival-photo { flex: none; max-width: min(34vw, 420px); max-height: 220px; width: auto; height: auto; object-fit: contain; filter: drop-shadow(0 0 18px color-mix(in srgb, var(--f-accent) 40%, transparent)); }
+@media (max-width: 720px) { .festival-photo { position: absolute; right: 0; bottom: 0; max-width: 40vw; max-height: 140px; opacity: 0.6; z-index: -1; } }

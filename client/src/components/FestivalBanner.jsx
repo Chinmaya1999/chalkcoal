@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useApp } from '../store';
 import Logo from './Logo';
@@ -86,11 +86,21 @@ const PALETTE = { confetti: ['#f6d365', '#fff', '#e9c46a', '#f4a261'], petals: [
 // ---------- the banner itself (also used for the live preview in admin) ----------
 export function BannerView({ f, preview = false, onClose }) {
   const t = resolveFestival(f);
+  // A very wide upload (≥ 3:1) is treated as a full banner; anything else is shown as an illustration beside the text.
+  const [wide, setWide] = useState(false);
+  useEffect(() => {
+    setWide(false);
+    if (!t?.image) return;
+    const im = new Image();
+    im.onload = () => setWide(im.naturalWidth / im.naturalHeight >= 3);
+    im.src = t.image;
+  }, [t?.image]);
   if (!t) return null;
   const colors = PALETTE[t.effect];
-  const style = { '--f-bg': t.bg, '--f-bg2': t.bg2, '--f-accent': t.accent, '--f-text': t.text, ...(t.image ? { '--f-img': `url(${t.image})` } : {}) };
+  const cover = !!t.image && wide;
+  const style = { '--f-bg': t.bg, '--f-bg2': t.bg2, '--f-accent': t.accent, '--f-text': t.text, ...(cover ? { '--f-img': `url(${t.image})` } : {}) };
   return (
-    <section className={`festival ${t.image ? 'has-img' : ''}`} style={style} aria-label={t.title}>
+    <section className={`festival ${cover ? 'has-img' : ''}`} style={style} aria-label={t.title}>
       <Particles effect={t.effect} count={14} colors={colors} />
       <div className="festival-in">
         {t.showLogo && <div className="festival-logo"><Logo tone="chalk" /></div>}
@@ -100,6 +110,7 @@ export function BannerView({ f, preview = false, onClose }) {
           {t.message && <p>{t.message}</p>}
           {preview ? <span className="btn light">{t.cta}</span> : (t.link?.startsWith('http') ? <a className="btn light" href={t.link}>{t.cta}</a> : <Link className="btn light" to={t.link || '/shop'}>{t.cta}</Link>)}
         </div>
+        {t.image && !cover && <img className="festival-photo" src={t.image} alt="" />}
         {!t.image && ART[t.art] && <svg className="festival-art" viewBox="0 0 200 120" aria-hidden>{ART[t.art](t.accent)}</svg>}
       </div>
       {!preview && <button className="festival-x" onClick={onClose} aria-label="Dismiss">×</button>}
