@@ -16,6 +16,7 @@ RUN npm ci --omit=dev --no-audit --no-fund
 # ---- 3. runtime ----
 FROM node:22-slim
 ENV NODE_ENV=production PORT=5050
+RUN apt-get update && apt-get -y upgrade && rm -rf /var/lib/apt/lists/*
 WORKDIR /app/server
 COPY --from=deps /app/server/node_modules ./node_modules
 COPY server/package.json ./
