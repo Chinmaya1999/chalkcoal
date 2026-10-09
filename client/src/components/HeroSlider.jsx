@@ -6,7 +6,6 @@ import { useApp } from '../store';
 const SLIDE_MS = 8500;
 const DEFAULTS = [
   { key: 'women', src: '/media/hero-women.mp4', poster: '/media/hero-women.jpg', pos: '52% 30%', eyebrow: "AW26 · Women's collection", title: 'The in\u2011between', cta: 'Shop women', to: '/women', alt: 'Black and white film of a woman in a hat adjusting a scarf' },
-  { key: 'men', src: '/media/hero-men.mp4', poster: '/media/hero-men.jpg', pos: '70% 30%', eyebrow: "AW26 · Men's collection", title: 'Heavyweight, always', cta: 'Shop men', to: '/men', alt: 'Black and white film of a man in a white shirt in a graffiti-covered train carriage' },
   { key: 'hoodie', src: '/media/feature-hoodie.mp4', poster: '/media/feature-hoodie.jpg', pos: '35% 40%', eyebrow: 'The essential · 420gsm', title: 'Heavyweight hoodie', cta: 'Discover', to: '/shop?category=sweats', alt: 'Black and white film of a woman in an oversized hoodie' },
 ];
 

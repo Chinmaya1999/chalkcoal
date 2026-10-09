@@ -200,7 +200,7 @@ textarea.input { height: auto; padding: 12px 14px; }
 .sec-head { display: flex; justify-content: space-between; align-items: end; margin-bottom: 28px; gap: 20px; flex-wrap: wrap; }
 .pdp-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; max-width: 680px; }
 .pdp-gallery .card-img { aspect-ratio: 4 / 5; }
-.pdp-gallery .card-img:first-child { grid-column: 1 / -1; aspect-ratio: 4 / 5; }
+.pdp-gallery .card-img:first-of-type { grid-column: 1 / -1; aspect-ratio: 4 / 5; }
 .pdp-info { position: sticky; top: 100px; display: grid; gap: 26px; }
 .pdp-info h1 { font-size: clamp(24px, 2.8vw, 40px); letter-spacing: 0.16em; }
 .pdp-price { font-size: 18px; letter-spacing: 0.06em; }
@@ -275,7 +275,7 @@ details.acc ul { padding-left: 18px; }
 .numeral.big { font-size: clamp(80px, 12vw, 190px); color: #cfcdc7; }
 .quote { font-family: var(--serif); font-weight: 300; text-transform: none; letter-spacing: -0.01em; line-height: 1; font-size: clamp(46px, 6.4vw, 110px); }
 .quote em { font-style: italic; }
-.rv.mask { opacity: 1; transform: none; clip-path: inset(0 0 100% 0); transition: clip-path 1.3s var(--ease); }
+.rv.mask { opacity: 1; transform: none; clip-path: inset(0 0 99% 0); transition: clip-path 1.3s var(--ease); }
 .rv.mask.in { clip-path: inset(0); }
 @media (prefers-reduced-motion: reduce) { .rv.mask { clip-path: none; transition: none; } }
 

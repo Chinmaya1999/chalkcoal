@@ -16,7 +16,7 @@ export default function Product() {
 
   useEffect(() => {
     setData(null); setError(''); setCi(0); setSize('');
-    api.get(`/api/products/${slug}`).then(setData).catch((e) => setError(e.message));
+    api.get(`/api/products/${slug}`).then((d) => { setData(d); const i = d.product.colors.findIndex((c) => d.product.colorImages?.[c.name]?.length); setCi(i > 0 ? i : 0); }).catch((e) => setError(e.message));
   }, [slug]);
 
   const p = data?.product;
@@ -32,6 +32,8 @@ export default function Product() {
 
   const color = p.colors[ci];
   const photos = photosFor(p, color.name);
+  const hasOwn = !!p.colorImages?.[color.name]?.length;
+  const shownIn = !hasOwn && photos.length ? p.colors.find((c) => p.colorImages?.[c.name]?.length)?.name : null;
   const stock = (s) => p.variants.find((v) => v.size === s && v.color === color.name)?.stock ?? 0;
   const left = size ? stock(size) : null;
   const add = () => addToCart({ productId: p._id, slug: p.slug, name: p.name, sku: p.sku, type: p.type, hex: color.hex, image: photosFor(p, color.name)[0], prices: p.prices, color: color.name, size, qty: 1 });
@@ -42,6 +44,8 @@ export default function Product() {
       <p className="eyebrow muted" style={{ paddingTop: 24 }}><Link to="/shop">Shop</Link> / <Link to={`/${p.gender}`}>{p.gender}</Link> / {p.name}</p>
       <div className="pdp">
         <div className="pdp-gallery">
+          {shownIn && <p className="eyebrow muted" style={{ margin: 0, gridColumn: '1 / -1' }}>{color.name} photography coming soon — {shownIn} photo shown for reference</p>}
+          {shownIn && <div className="card-img"><Garment type={p.type} color={color.hex} /></div>}
           {photos.length ? photos.map((src, i) => <div key={src} className="card-img"><img src={src} alt={`${p.name} in ${color.name} — photo ${i + 1}`} width="1080" height="1350" decoding="async" loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : 'auto'} /></div>) : (
             <>
               <div className="card-img"><Garment type={p.type} color={color.hex} /></div>
