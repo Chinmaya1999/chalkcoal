@@ -58,7 +58,7 @@ const checkoutSchema = z.object({
   paymentMethod: z.enum(['card', 'cod']),
   shipping: z.object({
     name: z.string().min(1), line1: z.string().min(1), line2: z.string().optional(), city: z.string().min(1),
-    state: z.string().optional(), zip: z.string().min(1), country: z.enum(COUNTRY_NAMES, { errorMap: () => ({ message: 'We currently deliver to the UK, Europe, USA and UAE' }) }), phone: z.string().optional(),
+    state: z.string().optional(), zip: z.string().min(1), country: z.enum(COUNTRY_NAMES, { error: 'We currently deliver to the UK, Europe, USA and UAE' }), phone: z.string().optional(),
   }),
 });
 
