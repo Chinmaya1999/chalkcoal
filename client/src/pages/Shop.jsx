@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 import Reveal from '../components/Reveal';
+import TryTheLook from '../components/TryTheLook';
 import { api, qs } from '../api';
 import { useSeo } from '../seo';
 
@@ -28,11 +29,12 @@ export default function Shop({ gender: fixed = '' }) {
 
   return (
     <div className="wrap">
-      <div className="page-head">
+      <div className="page-head compact">
         <span className="eyebrow muted">{data.total} styles{(color || category || q) && !loading ? ' · filtered' : ''}</span>
         {(color || category || q) && <button className="link" style={{ marginLeft: 16 }} onClick={() => setSp(fixed ? {} : gender ? { gender } : {})}>{[color, category, q && `“${q}”`].filter(Boolean).join(' · ')} ✕ Show all</button>}
         <h1 style={{ marginTop: 10 }}>{TITLES[gender] || 'All products'}</h1>
       </div>
+      {!loading && !category && !color && !q && <TryTheLook products={data.items} gender={gender} />}
       <div className="bar">
         <div className="pills">{CATS.map(([v, l]) => <button key={v} className={`pill ${category === v ? 'on' : ''}`} onClick={() => set('category', v)}>{l}</button>)}</div>
         <div className="pills">
